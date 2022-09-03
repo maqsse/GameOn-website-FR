@@ -34,6 +34,11 @@ img {
   overflow: hidden;
   margin: 3.5%;
 }
+ @media screen and (max-width: 540px) {
+.topnav{
+  margin:2%;
+}  
+}
 .header-logo {
     float: left;
 }
@@ -139,7 +144,7 @@ main {
 
 /* Modal form */
 
-.button {
+#button {
   background: #fe142f;
   margin-top: 0.5em;
   padding: 1em;
@@ -306,6 +311,54 @@ input[data-error]::after {
   cursor: pointer;
   transform: scale(0.7);
 }
+
+
+/*message feedback*/
+
+/*prénom*/
+#messageFirstName{
+  font-size: 20px;
+}
+  
+/*message nom*/
+#messageLastName{
+  display: none;
+  color: red;
+  width: 80%;
+  left: 15%;
+  font-size: 20px;
+}
+/*message conditions générales*/
+#messageCg{
+color: red;
+font-size: 20px;
+}
+/* message retour anniv' */
+#messageAnniv{
+  display: none;
+  color: red;
+  width: 80%;
+  font-size: 20px;
+}
+/* message retour mail */
+#messageMail{
+  display: none;
+  color: red;
+  width: 80%;
+  font-size: 20px;
+}
+
+
+/*message de confirmation*/
+
+.bground a{
+    color: red;
+    font-size: 20px;
+    }
+.bground a:hover{
+  cursor: pointer;
+}
+
 .close:before,
 .close:after {
   position: absolute;
@@ -486,7 +539,7 @@ footer {
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0px;
   }
   .hero-content::after {
     content: unset;
@@ -497,7 +550,10 @@ footer {
   .hero-headline {
     font-size: 4.5rem;
     white-space: normal;
-  }
+    text-align: center;
+      }
+    
+
   .hero-text {
     width: unset;
     font-size: 1.5rem;
@@ -527,3 +583,36 @@ footer {
   }
 }
 
+/* media queries */
+ @media screen and (max-width: 540px) {
+  .topnav a.icon{
+    margin-top: -65px;
+  }
+  .hero-headline {
+    font-size: 1.8rem;
+    text-align: initial;
+    font-weight: 900;
+  }
+   .hero-text{
+    width: 60%;
+margin-top: 30px;
+font-size: 0.8rem;
+  } 
+  
+  #messageMail, #messageFirstName, #messageLastName, #messageCg, #messageAnniv, #messagevalForm{
+    font-size: 12px;
+  }
+  .header-logo img{
+    width: 60%;
+    margin: 5%;
+  }
+  
+ .main-navbar i.fa.fa-bars{
+    color: red;
+    margin-top: 50%;
+  }
+  .hero-section{
+    min-height: 0vh;
+  }
+
+} 
